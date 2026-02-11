@@ -531,10 +531,6 @@ class SkiCollageView extends Component {
   };
 
   downloadCutout = async (cutout, index) => {
-    const timestamp = new Date()
-      .toISOString()
-      .slice(0, 19)
-      .replace(/[-:]/g, '-');
     await CutoutExtractor.downloadCanvasAsImage(
       cutout.canvas,
       `cutout_${index.toString().padStart(4, '0')}.png`
@@ -590,7 +586,7 @@ class SkiCollageView extends Component {
         <div className={classes.container}>
           {/* Batch Processing Header */}
           <Paper className={classes.section}>
-            <Typography variant="h5">📦 Batch Processing</Typography>
+            <Typography variant="h5">Batch Processing</Typography>
             <Typography className={classes.statsText}>
               Processing: {currentBatchIndex + 1} / {batchFiles.length} images
             </Typography>
@@ -605,9 +601,9 @@ class SkiCollageView extends Component {
           <Paper className={classes.section}>
             <Typography variant="h5">Results</Typography>
             <Typography className={classes.statsText}>
-              ✅ Completed: {batchResults.length} | 
-              🔍 Detected: {batchResults.reduce((sum, r) => sum + r.detected, 0)} people |
-              ✂️ Extracted: {batchResults.reduce((sum, r) => sum + r.extracted, 0)} cutouts
+              Completed: {batchResults.length} | 
+              Detected: {batchResults.reduce((sum, r) => sum + r.detected, 0)} people |
+              Extracted: {batchResults.reduce((sum, r) => sum + r.extracted, 0)} cutouts
             </Typography>
 
             {/* Results Table */}
@@ -630,13 +626,13 @@ class SkiCollageView extends Component {
                         <td style={{ padding: 8, textAlign: 'center' }}>{result.extracted}</td>
                         <td style={{ padding: 8, textAlign: 'center' }}>
                           {result.error ? (
-                            <span style={{ color: 'red' }}>❌ Error</span>
+                            <span style={{ color: 'red' }}>Error</span>
                           ) : result.collage ? (
-                            <span style={{ color: 'green' }}>✅ Complete</span>
+                            <span style={{ color: 'green' }}>Complete</span>
                           ) : result.extracted > 0 ? (
-                            <span style={{ color: 'orange' }}>⚠️ No collage</span>
+                            <span style={{ color: 'orange' }}>No collage</span>
                           ) : (
-                            <span style={{ color: 'gray' }}>⊘ No people</span>
+                            <span style={{ color: 'gray' }}>No people</span>
                           )}
                         </td>
                       </tr>
@@ -697,7 +693,7 @@ class SkiCollageView extends Component {
           </div>
           {selectedImage && (
             <Typography className={classes.statsText}>
-              ✓ Image loaded: {this.state.selectedImageName}
+              Image loaded: {this.state.selectedImageName}
             </Typography>
           )}
         </Paper>

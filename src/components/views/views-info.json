@@ -1,14 +1,10 @@
 {
   "image": {
     "name": "image_view",
-    "icon": "camera_at"
-  },
-  "video": {
-    "name": "video_view",
-    "icon": "camera_roll"
+    "icon": "camera_alt"
   },
   "ski_collage": {
     "name": "ski_collage_view",
-    "icon": "image_search"
+    "icon": "collections"
   }
 }

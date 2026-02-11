@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 // Components imports
 import VersionSelector from './VersionSelector';
-import Yolo from '../../yolo/yolo';
 
 // Material UI imports
 import Paper from '@material-ui/core/Paper';

@@ -1,6 +1,5 @@
-
 @media (max-width: 768px) {
-    .container {
-        grid-template-rows: 40% 30%;
-    }
+  .container {
+    grid-template-rows: 50% 40%;
+  }
 }

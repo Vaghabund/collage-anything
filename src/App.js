@@ -41,8 +41,7 @@ class App extends Component {
   updateView = () => {
     this.setState({viewsManager: this.state.viewsManager});
   };
-//<ModelSelector
-// onModelSelected = {this.loadModel}/>
+
   render() {
     return (
         <MuiThemeProvider theme={theme}>

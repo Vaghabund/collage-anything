@@ -13,7 +13,7 @@ import {withStyles} from '@material-ui/core';
 
 function importAll(r) {
   let images = [];
-  r.keys().map(item => { images.push(r(item)); });
+  r.keys().forEach(item => { images.push(r(item)); });
   return images;
 }
 const images = importAll(require.context('./../../../yolo/test/images', false, /\.(png|jpe?g|svg)$/));

@@ -9,7 +9,7 @@ import {withStyles} from '@material-ui/core/';
 
 function importAll(r) {
   let icons = {};
-  r.keys().map(
+  r.keys().forEach(
       item => {
         let name = item.replace('./', '').replace('.png', '');
         icons[name] = r(item);
