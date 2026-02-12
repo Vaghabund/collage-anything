@@ -1,8 +1,0 @@
-/* Ski Collage View - Minimal Styles */
-
-@media (max-width: 768px) {
-  .ski-collage-container {
-    padding: 10px;
-    gap: 10px;
-  }
-}

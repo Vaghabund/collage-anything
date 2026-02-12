@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ski-collage.css';
 import CutoutExtractor from './../../../image/CutoutExtractor';
 import CollageBuilder from './../../../image/CollageBuilder';
 import ImageManager from './../../../image/ImageManager';
@@ -17,7 +16,7 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-const styles = {
+const styles = theme => ({
   container: {
     padding: 20,
     display: 'flex',
@@ -25,6 +24,10 @@ const styles = {
     height: '90vh',
     gap: 20,
     overflowY: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      padding: 10,
+      gap: 10,
+    },
   },
   section: {
     padding: 15,
@@ -106,7 +109,7 @@ const styles = {
   progress: {
     marginTop: 10,
   },
-};
+});
 
 /**
  * CollagePreview component - renders the final collage from canvas
