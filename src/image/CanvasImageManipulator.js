@@ -17,7 +17,7 @@ export default class CanvasImageManipulator {
     ctx.beginPath();
     ctx.lineWidth = CanvasImageManipulator.BOX_WIDTH;
     ctx.strokeStyle = CanvasImageManipulator.BOX_COLOR;
-    boxes.map((box, index) => {
+    boxes.forEach((box, index) => {
       if (selectedIndex !== undefined
           && selectedIndex === index) {
         ctx.strokeStyle = CanvasImageManipulator.SELECTED_BOX_COLOR;

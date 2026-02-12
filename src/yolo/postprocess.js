@@ -35,10 +35,10 @@ async function postprocess(
       const classBoxes = tf.gather(boxes, nmsIndex);
       const classBoxScores = tf.gather(_boxScores, nmsIndex);
 
-      classBoxes.split(nmsIndex.size).map(box => {
+      classBoxes.split(nmsIndex.size).forEach(box => {
         boxes_.push(box.dataSync());
       });
-      classBoxScores.dataSync().map(score => {
+      classBoxScores.dataSync().forEach(score => {
         scores_.push(score);
       });
       classes_ = _classes.gather(nmsIndex).dataSync();

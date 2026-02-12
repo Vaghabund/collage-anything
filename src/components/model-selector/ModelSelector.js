@@ -2,16 +2,15 @@ import React, {Component} from 'react';
 
 // Components imports
 import VersionSelector from './VersionSelector';
-import Yolo from '../../yolo/yolo';
 
 // Material UI imports
-import Paper from '@material-ui/core/Paper';
-import Dialog from '@material-ui/core/Dialog';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import Fab from '@material-ui/core/Fab';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import Paper from '@mui/material/Paper';
+import Dialog from '@mui/material/Dialog';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import Fab from '@mui/material/Fab';
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 const VERSIONS = ['v1', 'v2', 'v3'];

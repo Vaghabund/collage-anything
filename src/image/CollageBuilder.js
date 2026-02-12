@@ -52,7 +52,6 @@ export class CollageBuilder {
     ctx.fillRect(0, 0, collageCanvas.width, collageCanvas.height);
 
     // Place images in grid
-    let row = 0;
     let col = 0;
     let yPos = finalConfig.padding;
 
@@ -74,7 +73,6 @@ export class CollageBuilder {
       col++;
       if (col >= finalConfig.columns) {
         col = 0;
-        row++;
         yPos += scaledDim.height + finalConfig.padding;
       }
     });
