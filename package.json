@@ -31,6 +31,10 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "overrides": {
+    "nth-check": "^2.1.1",
+    "postcss": "^8.4.33"
+  },
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
