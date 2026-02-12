@@ -5,7 +5,7 @@ import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 
 function importAll(r) {
   let icons = {};

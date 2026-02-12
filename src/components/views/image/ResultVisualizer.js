@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import ClassCard from './ClassCard';
 
 import Paper from '@mui/material/Paper';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';

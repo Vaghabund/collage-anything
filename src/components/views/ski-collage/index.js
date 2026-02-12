@@ -11,7 +11,7 @@ import {
   Typography,
   LinearProgress,
 } from '@mui/material';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import GetAppIcon from '@mui/icons-material/GetApp';
 import DeleteIcon from '@mui/icons-material/Delete';
