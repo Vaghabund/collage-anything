@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 
 import ClassCard from './ClassCard';
 
-import Paper from '@material-ui/core/Paper';
-import {withStyles} from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
-import Chip from '@material-ui/core/Chip';
-import Divider from '@material-ui/core/Divider';
+import Paper from '@mui/material/Paper';
+import { withStyles } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import Chip from '@mui/material/Chip';
+import Divider from '@mui/material/Divider';
 
 const styles = {
   root: {

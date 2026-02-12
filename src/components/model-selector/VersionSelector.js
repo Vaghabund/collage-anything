@@ -1,11 +1,10 @@
 import React from 'react';
 
 // Material UI imports
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import FormControlLabel
-  from '@material-ui/core/FormControlLabel/FormControlLabel';
-import Switch from '@material-ui/core/Switch/Switch';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
 
 const VersionSelector = props => {
   return(

@@ -7,7 +7,7 @@ import ViewsManager from './components/views/ViewsManager'
 import ModelSelector from './components/model-selector/ModelSelector';
 
 // Material UI imports
-import {MuiThemeProvider} from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import Yolo from './yolo/yolo';
 
 class App extends Component {
@@ -44,7 +44,7 @@ class App extends Component {
 
   render() {
     return (
-        <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
           <div>
             <ModelSelector
                 onModelSelected = {this.loadModel}/>
@@ -53,7 +53,7 @@ class App extends Component {
                 updateView={this.updateView}/>
             {this.state.viewsManager.getCurrentViewComponent()}
           </div>
-        </MuiThemeProvider>
+        </ThemeProvider>
     );
   }
 }

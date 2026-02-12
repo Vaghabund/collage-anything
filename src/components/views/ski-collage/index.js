@@ -10,11 +10,11 @@ import {
   TextField,
   Typography,
   LinearProgress,
-} from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import GetAppIcon from '@material-ui/icons/GetApp';
-import DeleteIcon from '@material-ui/icons/Delete';
+} from '@mui/material';
+import { withStyles } from '@mui/material/styles';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import GetAppIcon from '@mui/icons-material/GetApp';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const styles = theme => ({
   container: {

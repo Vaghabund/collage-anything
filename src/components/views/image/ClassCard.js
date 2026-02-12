@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent/CardContent';
-import Typography from '@material-ui/core/Typography/Typography';
-import Chip from '@material-ui/core/Chip';
-import {withStyles} from '@material-ui/core/';
+import Card from '@mui/material/Card';
+import CardActionArea from '@mui/material/CardActionArea';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import Chip from '@mui/material/Chip';
+import { withStyles } from '@mui/material/styles';
 
 function importAll(r) {
   let icons = {};

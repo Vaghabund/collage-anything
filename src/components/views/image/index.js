@@ -6,10 +6,10 @@ import ImageManager from './../../../image/ImageManager';
 import CanvasManager from '../../../image/CanvasImageManipulator';
 import ResultVisualizer from './ResultVisualizer';
 
-import Icon from '@material-ui/core/Icon';
-import Fab from '@material-ui/core/Fab';
-import Paper from '@material-ui/core/Paper';
-import {withStyles} from '@material-ui/core';
+import Icon from '@mui/material/Icon';
+import Fab from '@mui/material/Fab';
+import Paper from '@mui/material/Paper';
+import { withStyles } from '@mui/material/styles';
 
 function importAll(r) {
   let images = [];

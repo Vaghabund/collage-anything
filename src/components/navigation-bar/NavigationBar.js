@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 
 // Material UI imports
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Icon from '@material-ui/core/Icon';
+import AppBar from '@mui/material/AppBar';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Icon from '@mui/material/Icon';
 
 class NavigationBar extends Component {
   handleChange = (event, newValue) => {
