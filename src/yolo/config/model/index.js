@@ -2,9 +2,8 @@ const modelsPath = "https://raw.githubusercontent.com/CristianAbrante/YOLO-in-br
 const modelFile = "model.json";
 
 /**
- * Models path are exported because tf.loadLayersModel
- * expects a URL instead the actual json config
- * file.
+ * Model paths are exported because tf.loadLayersModel expects
+ * a URL to the model.json file (not the parsed JSON object).
  */
 export default {
   tiny: {
