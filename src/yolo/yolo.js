@@ -16,7 +16,7 @@ export default class Yolo {
   }
 
   loadModel = async () => {
-    this.model = await tf.loadModel(this.config.model);
+    this.model = await tf.loadLayersModel(this.config.model);
   };
 
   async predict(image) {
@@ -27,7 +27,7 @@ export default class Yolo {
       const ctx = canvas.getContext('2d');
       ctx.drawImage(image, 0, 0, Yolo.INPUT_SIZE, Yolo.INPUT_SIZE);
 
-      let imageTensor = tf.fromPixels(canvas, 3);
+      let imageTensor = tf.browser.fromPixels(canvas, 3);
       imageTensor = imageTensor.expandDims(0).toFloat().div(tf.scalar(255));
       return this.model.predict(imageTensor);
     });
@@ -49,7 +49,7 @@ export default class Yolo {
 
   async predictVideo(frame, width, height) {
     let outputs = tf.tidy(() => {
-      let imageTensor = tf.fromPixels(frame, 3);
+      let imageTensor = tf.browser.fromPixels(frame, 3);
       imageTensor = imageTensor.expandDims(0).toFloat().div(tf.scalar(255));
       return this.model.predict(imageTensor);
     });
