@@ -1,8 +1,8 @@
 import React from 'react';
 import ImageView from '../views/image/';
-import SkiCollageView from '../views/ski-collage/';
+import CollageAnythingView from '../views/collage-anything/';
 
 export default {
   image_view: model => <ImageView model={model}/>,
-  ski_collage_view: model => <SkiCollageView model={model}/>
+  collage_anything_view: model => <CollageAnythingView model={model}/>
 }

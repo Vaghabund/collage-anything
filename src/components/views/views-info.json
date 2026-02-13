@@ -3,8 +3,8 @@
     "name": "image_view",
     "icon": "camera_alt"
   },
-  "ski_collage": {
-    "name": "ski_collage_view",
+  "collage_anything": {
+    "name": "collage_anything_view",
     "icon": "collections"
   }
 }
