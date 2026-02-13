@@ -4,14 +4,16 @@
   "private": true,
   "homepage": ".",
   "dependencies": {
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
-    "react-scripts": "5.0.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.5.0",
+    "@mui/material": "^6.5.0",
+    "@mui/styles": "^6.5.0",
     "@tensorflow/tfjs": "^4.22.0",
-    "@mui/material": "^5.15.0",
-    "@mui/icons-material": "^5.15.0",
-    "react-swipeable-views": "^0.14.1",
-    "react-swipeable-views-utils": "^0.14.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "react-swipeable-views-v18": "^1.1.27"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,6 +32,10 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "overrides": {
+    "nth-check": "^2.1.1",
+    "postcss": "^8.4.33"
+  },
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }

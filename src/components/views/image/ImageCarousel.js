@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import SwipeableViews from 'react-swipeable-views';
+import {SwipeableViews} from 'react-swipeable-views-v18';
 import MobileStepper from '@mui/material/MobileStepper';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 
 const styles = {
   root: {

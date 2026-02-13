@@ -9,7 +9,7 @@ import ResultVisualizer from './ResultVisualizer';
 import Icon from '@mui/material/Icon';
 import Fab from '@mui/material/Fab';
 import Paper from '@mui/material/Paper';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 
 function importAll(r) {
   let images = [];
