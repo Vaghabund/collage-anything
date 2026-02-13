@@ -1,4 +1,4 @@
-const modelsPath = "https://raw.githubusercontent.com/CristianAbrante/YOLO-in-browser/master/src/yolo/config/model/";
+const modelsPath = process.env.PUBLIC_URL + "/yolo/config/model/";
 const modelFile = "model.json";
 
 /**
