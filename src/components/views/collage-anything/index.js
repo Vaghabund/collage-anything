@@ -31,18 +31,18 @@ const styles = theme => ({
   },
   section: {
     padding: 15,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: theme.palette.background.paper,
     borderRadius: 4,
   },
   uploadArea: {
-    border: '2px dashed #007bff',
+    border: `2px dashed ${theme.palette.primary.main}`,
     borderRadius: 4,
     padding: 20,
     textAlign: 'center',
     cursor: 'pointer',
     transition: 'background-color 0.3s',
     '&:hover': {
-      backgroundColor: '#e8f4f8',
+      backgroundColor: theme.palette.mode === 'dark' ? '#2a2a2a' : '#e8f4f8',
     },
   },
   buttonGroup: {
@@ -59,20 +59,20 @@ const styles = theme => ({
     maxHeight: 400,
     overflowY: 'auto',
     padding: 10,
-    backgroundColor: '#fff',
+    backgroundColor: theme.palette.mode === 'dark' ? '#0a0a0a' : '#fff',
     borderRadius: 4,
-    border: '1px solid #ddd',
+    border: `1px solid ${theme.palette.divider}`,
   },
   cutoutCardWrapper: {
     position: 'relative',
     cursor: 'pointer',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: theme.palette.background.default,
     borderRadius: 4,
     overflow: 'hidden',
     boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
     transition: 'box-shadow 0.2s ease',
     '&:hover': {
-      boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+      boxShadow: '0 4px 8px rgba(0,0,0,0.3)',
     },
   },
   deleteButton: {
@@ -96,15 +96,15 @@ const styles = theme => ({
   collagePreview: {
     maxWidth: '100%',
     maxHeight: 400,
-    border: '1px solid #ddd',
+    border: `1px solid ${theme.palette.divider}`,
     marginTop: 10,
     borderRadius: 4,
-        backgroundColor: '#f5f5f5',
+    backgroundColor: theme.palette.background.default,
   },
   statsText: {
     marginTop: 10,
     fontSize: '0.9rem',
-    color: '#666',
+    color: theme.palette.text.secondary,
   },
   progress: {
     marginTop: 10,
@@ -218,7 +218,7 @@ class CutoutCard extends Component {
   }
 }
 
-class SkiCollageView extends Component {
+class CollageAnythingView extends Component {
   inputRef;
   imageManager;
   batchQueue = [];
@@ -831,4 +831,4 @@ class SkiCollageView extends Component {
   }
 }
 
-export default withStyles(styles)(SkiCollageView);
+export default withStyles(styles)(CollageAnythingView);

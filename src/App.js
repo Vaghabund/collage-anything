@@ -8,6 +8,7 @@ import ModelSelector from './components/model-selector/ModelSelector';
 
 // Material UI imports
 import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import Yolo from './yolo/yolo';
 
 class App extends Component {
@@ -45,6 +46,7 @@ class App extends Component {
   render() {
     return (
         <ThemeProvider theme={theme}>
+          <CssBaseline />
           <div>
             <ModelSelector
                 onModelSelected = {this.loadModel}/>

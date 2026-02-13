@@ -19,7 +19,11 @@ export default class Yolo {
     this.model = await tf.loadLayersModel(this.config.model);
   };
 
-  async predict(image) {
+  async predict(image, customParams = {}) {
+    const maxBoxes = customParams.maxBoxes !== undefined ? customParams.maxBoxes : Yolo.MAX_BOXES;
+    const scoreThreshold = customParams.scoreThreshold !== undefined ? customParams.scoreThreshold : Yolo.SCORE_THRESHOLD;
+    const iouThreshold = customParams.iouThreshold !== undefined ? customParams.iouThreshold : Yolo.IOU_THRESHOLD;
+    
     let outputs = tf.tidy(() => {
       const canvas = document.createElement('canvas');
       canvas.width = Yolo.INPUT_SIZE;
@@ -39,9 +43,9 @@ export default class Yolo {
         this.config.classes.length,
         this.config.classes,
         [image.height, image.width],
-        Yolo.MAX_BOXES,
-        Yolo.SCORE_THRESHOLD,
-        Yolo.IOU_THRESHOLD,
+        maxBoxes,
+        scoreThreshold,
+        iouThreshold,
     );
     tf.dispose(outputs);
     return boxes;
