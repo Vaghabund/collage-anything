@@ -10,6 +10,27 @@ export default class CanvasImageManipulator {
     this.setCanvas(canvas);
   }
 
+  /**
+   * Calculate appropriate text color based on background luminance
+   * @param {string} hexColor - Background color in hex format
+   * @returns {string} - Either '#ffffff' or '#000000'
+   */
+  getContrastColor(hexColor) {
+    // Remove # if present
+    const hex = hexColor.replace('#', '');
+    
+    // Convert to RGB
+    const r = parseInt(hex.substr(0, 2), 16);
+    const g = parseInt(hex.substr(2, 2), 16);
+    const b = parseInt(hex.substr(4, 2), 16);
+    
+    // Calculate relative luminance using ITU-R BT.709
+    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+    
+    // Return black for light backgrounds, white for dark backgrounds
+    return luminance > 0.5 ? '#000000' : '#ffffff';
+  }
+
   drawBoxes(image, boxes, selectedIndex, options = {}) {
     const drawBoxes = options.drawBoxes !== undefined ? options.drawBoxes : true;
     const drawLabels = options.drawLabels !== undefined ? options.drawLabels : true;
@@ -44,18 +65,28 @@ export default class CanvasImageManipulator {
         const textWidth = ctx.measureText(label).width;
         const textHeight = 16;
         const padding = 4;
+        const labelHeight = textHeight + padding * 2;
+        
+        // Determine label position: above box if space available, otherwise below
+        const labelAboveBox = box.top >= labelHeight;
+        const labelY = labelAboveBox 
+          ? box.top - labelHeight 
+          : box.top + box.height;
+        const textY = labelAboveBox 
+          ? box.top - padding 
+          : box.top + box.height + textHeight + padding;
         
         // Draw background rectangle for label
         ctx.fillRect(
           box.left - 1,
-          box.top - textHeight - padding * 2,
+          labelY,
           textWidth + padding * 2,
-          textHeight + padding * 2
+          labelHeight
         );
         
-        // Draw label text
-        ctx.fillStyle = '#ffffff';
-        ctx.fillText(label, box.left + padding, box.top - padding);
+        // Draw label text with contrast-appropriate color
+        ctx.fillStyle = this.getContrastColor(currentColor);
+        ctx.fillText(label, box.left + padding, textY);
         ctx.fillStyle = currentColor;
       }
     });
