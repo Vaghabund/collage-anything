@@ -680,7 +680,7 @@ class CollageAnythingView extends Component {
           >
             <CloudUploadIcon style={{ fontSize: 48, color: '#007bff' }} />
             <Typography>
-              Click here or drag and drop ski slope images (multiple supported!)
+              Click here or drag and drop images (multiple supported!)
             </Typography>
             <Typography style={{ fontSize: '0.9rem', color: '#999', marginTop: 8 }}>
               Single image: Extract & build collage | Multiple images: Batch process all

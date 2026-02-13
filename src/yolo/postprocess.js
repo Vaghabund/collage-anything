@@ -65,7 +65,8 @@ async function postprocess(
       height,
       width,
       score: scores_[i],
-      class: classNames[classes_[i]]
+      class: classNames[classes_[i]],
+      cls: classes_[i]  // Add numeric class index for filtering
     }
   });
 }
